@@ -1,1 +1,311 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// ### Primary
+$Bright-Blue: hsl(220, 98%, 61%);
+$Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+// ### Light Theme
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+$Light-Grayish-Blue: hsl(233, 11%, 84%);
+$Dark-Grayish-Blue: hsl(236, 9%, 61%);
+$Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+// ### Dark Theme
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue: hsl(234, 39%, 85%);
+$Light-Grayish-Blu: hsl(236, 33%, 92%);
+$Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+$Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+body {
+    background-color: $Very-Dark-Blue !important;
+    padding-bottom: 20px;
+    &.night {
+        background-color: $Light-Grayish-Blue !important;
+    }
+}
+
+button {
+    background-color: $Very-Dark-Desaturated-Blue;
+    color: $Dark-Grayish-Blue;
+    border: none;
+    &.active {
+        color: $Bright-Blue;
+    }
+}
+
+.circle {
+    border: .5px solid $Dark-Grayish-Blue;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+header {
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    background: url(./assets/images/bg-desktop-dark.jpg) no-repeat center left/cover;
+    &.night {
+        background: url(./assets/images/bg-desktop-light.jpg) no-repeat center left/cover;
+        .input-group {
+            background-color: $Very-Light-Gray;
+            .input-group-text {
+                background-color: $Very-Light-Gray;
+            }
+            .form-control {
+                background-color: $Very-Light-Gray;
+            }
+        }
+    }
+    .d-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            margin-top: 100px;
+            margin-right: 300px;
+            color: $Light-Grayish-Blue;
+            font-size: 3.5rem;
+            letter-spacing: 10px;
+            font-weight: 400;
+        }
+        img {
+            margin-top: 100px;
+            &.moon {
+                display: none;
+            }
+        }
+    }
+    .input-group {
+        width: 37%;
+        margin: 20px auto;
+        background-color: $Very-Dark-Desaturated-Blue;
+        border-radius: 5px;
+        .input-group-text {
+            background-color: $Very-Dark-Desaturated-Blue;
+            margin: 10px;
+            padding: 10px;
+            margin-right: 0px;
+            border: none;
+        }
+        .form-control {
+            background-color: $Very-Dark-Desaturated-Blue;
+            border: none;
+            color: $Dark-Grayish-Blue;
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+main {
+    position: relative;
+    top: -110px;
+    width: 39%;
+    margin: auto;
+    &.night {
+        .container {
+            .control {
+                padding: 20px;
+                color: $Dark-Grayish-Blue;
+                font-weight: 200;
+                justify-content: space-between;
+                align-items: center;
+                .item-left {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                .buttons {
+                    background-color: $Very-Light-Gray;
+                    button {
+                        margin-right: 15px;
+                        background-color: $Very-Light-Gray;
+                        color: $Very-Dark-Blue;
+                        &.active {
+                            color: $Bright-Blue;
+                        }
+                    }
+                }
+                button {
+                    margin-right: 15px;
+                    background-color: $Very-Light-Gray;
+                    color: $Very-Dark-Blue;
+                    &.active {
+                        color: $Bright-Blue;
+                    }
+                }
+            }
+            .list-group {
+                background-color: $Very-Light-Gray;
+                .list-group-item {
+                    background-color: $Very-Light-Gray;
+                    padding: 20px;
+                    border: none;
+                    border-bottom: 1px solid $Very-Dark-Desaturated-Blue;
+                    .d-flex {
+                        background-color: $Very-Light-Gray;
+                    }
+                    .d-flex {
+                        span {
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        .control {
+            padding: 20px;
+            color: $Dark-Grayish-Blue;
+            font-weight: 200;
+            justify-content: space-between;
+            align-items: center;
+            .item-left {
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .buttons {
+                button {
+                    margin-right: 15px;
+                }
+            }
+        }
+        .list-group {
+            background-color: $Very-Dark-Desaturated-Blue;
+            .list-group-item {
+                background-color: $Very-Dark-Desaturated-Blue;
+                padding: 20px;
+                border: none;
+                border-bottom: 1px solid $Light-Grayish-Blu;
+                .d-flex {
+                    background-color: $Very-Dark-Desaturated-Blue;
+                }
+                &.completed {
+                    .d-flex {
+                        color: $Dark-Grayish-Blue;
+                        text-decoration: line-through;
+                        font-size: 20px;
+                        font-weight: 200;
+                        .circle {
+                            background-image: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+                            position: relative;
+                            border: none;
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 8px;
+                                left: 7px;
+                                background: url(./assets/images/icon-check.svg) no-repeat;
+                                width: 100%;
+                                height: 100%;
+                                z-index: 100;
+                            }
+                        }
+                    }
+                }
+                .d-flex {
+                    color: $Light-Grayish-Blue;
+                    font-size: 20px;
+                    font-weight: 200;
+                    .circle {
+                        margin-right: 10px;
+                    }
+                    .close {
+                        align-self: flex-end;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        height: 40vh;
+        width: 100%;
+        position: relative;
+        background: url(./assets/images/bg-mobile-dark.jpg) no-repeat center left/cover;
+        &.night {
+            background: url(./assets/images//bg-mobile-light.jpg) no-repeat center left/cover;
+        }
+        .d-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            padding-top: 66px;
+            h1 {
+                font-size: 2rem;
+                margin: 0;
+                width: 100px;
+            }
+            img {
+                margin-top: 0;
+            }
+        }
+        .input-group {
+            width: 92%;
+            margin: 20px auto;
+            .input-group-text {
+                margin: 10px;
+            }
+        }
+    }
+    main {
+        top: -35px;
+        width: 100%;
+        .list-group {
+            .list-group-item {
+                padding: 15px !important;
+                .d-flex {
+                    span {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .control {
+            padding: 10px !important;
+            display: grid !important;
+            position: relative;
+            grid-template-columns: 1fr 1fr;
+            .item-left {
+                font-size: 12px !important;
+                font-weight: 400;
+                margin-right: 10px;
+            }
+            .buttons {
+                position: absolute;
+                top: 60px;
+                width: 350px;
+                background-color: $Very-Dark-Desaturated-Blue;
+                padding: 10px;
+                border-radius: 5%;
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
