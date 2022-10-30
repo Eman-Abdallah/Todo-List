@@ -34,6 +34,7 @@ console.log(this.all);
 console.log(this.todoList);
 
 
+
 }
   checked(id:number){
 this.todoList[id].completed = !this.todoList[id].completed;

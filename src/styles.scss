@@ -164,6 +164,7 @@ main {
         }
     }
     .container {
+        margin-top: 76px;
         .control {
             padding: 20px;
             color: $Dark-Grayish-Blue;
@@ -230,7 +231,7 @@ main {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     header {
         height: 40vh;
         width: 100%;
@@ -265,6 +266,9 @@ main {
     main {
         top: -35px;
         width: 100%;
+        .container {
+            margin-top: 0;
+        }
         .list-group {
             .list-group-item {
                 padding: 15px !important;
